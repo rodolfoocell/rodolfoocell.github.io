@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordem de Serviço</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+  
+    <h1>Ordem de Serviço</h1>
+    <form id="osForm">
+      <fieldset>
+        <legend>Informações Gerais</legend>
+        <label for="numeroOS">Marca do Aparelho:</label>
+        <input type="text" id="numeroOS" required>
+
+        <label for="dataEmissao">Data de Entrada:</label>
+        <input type="date" id="dataEmissao" required>
+
+        <label for="dataConclusao">Data da Entrega:</label>
+        <input type="date" id="dataConclusao">
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações do Cliente</legend>
+        <label for="nomeCliente">Nome do Cliente Final:</label>
+        <input type="text" id="nomeCliente" required>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" required>
+
+        <label for="telefone">Telefone de Contato:</label>
+        <input type="tel" id="telefone" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Detalhes do Serviço</legend>
+        <label for="descricaoServico">Descrição do Serviço:</label>
+        <textarea id="descricaoServico" rows="4" required></textarea>
+
+<label for="marcaEquipamento">Marca do Equipamento:</label>
+<select id="marcaEquipamento" required>
+  <option value="Iphone">iphone</option>
+  <option value="LG">LG</option>
+  <option value="SAMSUMG">SAMSUMG</option>
+  <option value="MOTOROLA">MOTOROLA</option>
+  <option value="Iphone">iPhone 15 Pro</option>
+  <option value="Iphone">iPhone 15</option>
+  <option value="Samsung">Samsung Galaxy S24 Ultra</option>
+  <option value="Samsung">Samsung Galaxy Z Fold 6</option>
+  <option value="Samsung">Samsung Galaxy Z Flip 6</option>
+  <option value="Motorola">Motorola Edge 40 Pro</option>
+  <option value="Motorola">Motorola Razr+</option>
+  <option value="Google">Google Pixel 8 Pro</option>
+  <option value="Google">Google Pixel Fold</option>
+  <option value="OnePlus">OnePlus 12</option>
+  <option value="Xiaomi">Xiaomi 14 Pro</option>
+  <option value="Xiaomi">Xiaomi Mi Mix Fold 3</option>
+  <option value="Oppo">Oppo Find X6 Pro</option>
+  <option value="Oppo">Oppo Find N3 Flip</option>
+  <option value="Vivo">Vivo X100 Pro</option>
+  <option value="Vivo">Vivo V29 Pro</option>
+  <option value="Sony">Sony Xperia 1 VI</option>
+  <option value="Asus">Asus ROG Phone 7 Ultimate</option>
+        </select>
+
+        <label for="modeloEquipamento">Modelo e Número de Série:</label>
+        <input type="text" id="modeloEquipamento">
+
+        <label for="dataGarantia">Data de Garantia:</label>
+        <input type="date" id="dataGarantia">
+
+        <label for="valorServico">Valor do Serviço:</label>
+        <input type="number" id="valorServico" step="0.01" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações da Empresa Prestadora</legend>
+        <label for="nomeLoja">Rodolfo cell - Assistência Técnica:</label>
+        <input type="text" id="nomeLoja" required>
+
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" required>
+
+        <label for="nomeTecnico">Nome do Técnico:</label>
+        <input type="text" id="nomeTecnico" required>
+
+        <label for="enderecoLoja">Endereço da Loja:</label>
+<input type="text" id="enderecoLoja" required>
+
+<label for="telefoneLoja">Telefone da Loja:</label>
+<input type="text" id="telefoneLoja" required>
+
+
+        
+      
+      </fieldset>
+
+      <button type="button" id="gerarPDF">Gerar PDF</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
